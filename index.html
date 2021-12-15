@@ -11,19 +11,36 @@
   function f_redirect() {
 
   var arr = [
-    'https://docs.google.com/forms/d/e/1FAIpQLSc2QL_zY2YjfF4IcUx3YQucd5S5Ua1-HMLlpcVxi3Gu_SO4fw/viewform?usp=sf_link',
-    'https://docs.google.com/forms/d/e/1FAIpQLSdo4YKZiWrirgiBAhCbN4UE0oZHkn__RuAAL_pMH-xCJA9nMg/viewform?usp=sf_link',
-    'https://docs.google.com/forms/d/e/1FAIpQLSeDX4IrT1y0KYoigsfP5uGj8xbQEh0_l4bi-bs5yP7D-4lofw/viewform?usp=sf_link',
-      
-    'https://docs.google.com/forms/d/e/1FAIpQLSdmQdCC43xIxAXmOFoXFLSjoUCjjfEkxMszlFHJbURciTKw-g/viewform?usp=sf_link'
+      //①質問(オーリスに一言)
+    'https://forms.gle/SpdMc3URHon9Ssy88',
+      //②質問(オーリスの人に質問したい質問項目)
+    'https://forms.gle/az3dQ6cgySEeLjPv7',
+      //③質問(最近悩んでること)
+    'https://forms.gle/nSBqBcbq16TQjxdw6',
+      //④質問(風紀委員に一言)
+    'https://forms.gle/g3W66yWursirA7Uj7',
+      //⑤あたり(恵美さんの写真)
+    'https://forms.gle/fhjFSun3tR6hJ5699'
   ];
   var num = arr.length;
   if (arr.length == 0) return false;
 
   // 0 から (arr.length - 1) の乱数を取得
   var num = Math.floor(Math.random() * arr.length);
-  location.href = arr[num]; // リダイレクト
+  var i = 0;
+  if(num == 4){
+      for(i=0;i<=5;i++){
+        var min = 0 ;
+        var max = arr.length ;
+        var num = Math.floor( Math.random() * (max + 1 - min) ) + min ;
+        if(num!=4)
+        {
+            break;  
+        }
+      }
   }
+location.href = arr[num]; // リダイレクト
+}
 </script>
 </head>
 
