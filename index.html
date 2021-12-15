@@ -30,9 +30,7 @@
   var i = 0;
   if(num == 4){
       for(i=0;i<=5;i++){
-        var min = 0;
-        var max = 4;
-        num = Math.floor( Math.random() * (max + 1 - min) ) + min ;
+        num = Math.floor(Math.random() * arr.length);
         if(num!=4)
         {
             break;  
