@@ -71,9 +71,9 @@
 // 0 から (arr.length - 1) の乱数を取得
   var index = sum -1;
   var k=0;
-  var num = Math.floor(Math.random() * index);
+  var randNum = Math.floor(Math.random() * index);
   for(k=0; k<num;k++){
-      if((num = num - arr[k][1]) < 0){
+      if((randNum = randNum - arr[k][1]) < 0){
           break;
       }
   }
