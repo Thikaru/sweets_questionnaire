@@ -46,27 +46,15 @@
       //⑯質問(掃除が行き届いていない場所はありますか？どこですか？)
     ['https://forms.gle/kgUiNgbxSVV8AtSQ7', 200],
       //⑰NO.Seq当たり
-    ['https://forms.gle/84koYxQxNDKmnhcL9', 100]
+    ['https://forms.gle/84koYxQxNDKmnhcL9', 50]
   ];
   var num = arr.length;
   var sum = 0; 
   var i=0
   if (arr.length == 0) return false;
-  for(i=0; i<num;i++){
+  for(i=0; i<num; i++){
       sum += arr[i][1];
   }
-
-  // 0 から (arr.length - 1) の乱数を取得
-//  var num = Math.floor(Math.random() * arr.length);
-//  if(num == 17){
-//      for(i=0;i<=1;i++){
-//        num = Math.floor(Math.random() * arr.length);
-//        if(num!=17)
-//        {
-//            break;  
-//        }
-//      }
-//  }
       
 // 0 から (arr.length - 1) の乱数を取得
   var index = sum -1;
@@ -77,6 +65,7 @@
           break;
       }
   }
+  
   location.href = arr[k][0]; // リダイレクト
 }
 </script>
